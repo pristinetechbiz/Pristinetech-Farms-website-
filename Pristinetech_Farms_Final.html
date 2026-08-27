@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Pristinetech Farms — livestock farming, livestock procurement and sales, and professional dog & cat boarding in Abuja and Oyo State.">
+<meta name="theme-color" content="#123524">
+<title>Pristinetech Farms | Livestock & Pet Boarding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green:#123524;
+  --green-2:#1d5a3b;
+  --green-3:#2f7a4e;
+  --gold:#e5ad3c;
+  --cream:#faf7ef;
+  --cream-2:#f2ecdc;
+  --ink:#172019;
+  --muted:#617066;
+  --white:#fff;
+  --line:#dfe7df;
+  --shadow:0 18px 50px rgba(18,53,36,.12);
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+.serif{font-family:"Playfair Display",serif}
+.eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green-3)}
+.section{padding:92px 0}
+.section-head{max-width:700px;margin-bottom:44px}
+.section-head h2{font:700 clamp(2rem,4vw,3rem)/1.08 "Playfair Display",serif;margin-top:8px;color:var(--green)}
+.section-head p:last-child{margin-top:15px;color:var(--muted);font-size:1.02rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:14px 21px;font-weight:700;font-size:.92rem;border:1px solid transparent;transition:.2s ease;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.btn-whatsapp{background:#25d366;color:#082a17}
+.btn-gold{background:var(--gold);color:var(--green)}
+.btn-light{background:#fff;color:var(--green)}
+.btn-outline{border-color:rgba(255,255,255,.35);color:#fff}
+
+/* top notice */
+.topbar{background:var(--gold);color:var(--green);font-size:.8rem;font-weight:700}
+.topbar .container{display:flex;justify-content:center;gap:22px;padding:8px 0}
+
+/* navigation */
+header{position:sticky;top:0;z-index:100;background:rgba(18,53,36,.96);backdrop-filter:blur(14px);color:#fff;box-shadow:0 2px 20px rgba(0,0,0,.08)}
+.nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+  color:#fff;
+}
+.farm-logo{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  flex:0 0 58px;
+  display:block;
+  filter:drop-shadow(0 3px 7px rgba(0,0,0,.25));
+}
+.brand-copy{
+  min-width:0;
+  display:block;
+}
+.brand strong{
+  display:block;
+  font:700 1.02rem/1 "Playfair Display",serif;
+  letter-spacing:.02em;
+  white-space:nowrap;
+}
+.brand small{
+  display:block;
+  color:#b9d5c3;
+  font-size:.64rem;
+  margin-top:5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{font-size:.86rem;color:#eef7f0;opacity:.88}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.nav-cta{padding:10px 16px}
+.menu{display:none;background:none;border:0;color:#fff;font-size:1.7rem}
+
+/* hero */
+.hero{background:var(--green);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(229,173,60,.08);right:-220px;top:-220px}
+.hero-grid{min-height:650px;display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center;padding:76px 0}
+.hero-copy{position:relative;z-index:1}
+.hero h1{font:800 clamp(2.7rem,6vw,5rem)/1.02 "Playfair Display",serif;letter-spacing:-.035em;max-width:680px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero-lede{font-size:1.08rem;color:#dbe9df;max-width:600px;margin:22px 0 30px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:38px;padding-top:25px;border-top:1px solid rgba(255,255,255,.14)}
+.hero-trust strong{display:block;color:var(--gold);font-size:1.2rem}
+.hero-trust span{font-size:.75rem;color:#b8cabd}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;height:500px;object-fit:cover;border-radius:28px;border:5px solid rgba(229,173,60,.35);box-shadow:0 28px 60px rgba(0,0,0,.3)}
+.photo-tag{position:absolute;left:22px;bottom:22px;background:rgba(255,255,255,.94);color:var(--green);border-radius:16px;padding:13px 16px;box-shadow:0 12px 30px rgba(0,0,0,.16);font-weight:700}
+.photo-tag span{display:block;font-size:.72rem;color:var(--muted);font-weight:500}
+
+/* quick services */
+.quick{margin-top:-45px;position:relative;z-index:5}
+.quick-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quick-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+.quick-icon{font-size:1.6rem;margin-bottom:12px}
+.quick-card h3{font:700 1.15rem "Playfair Display",serif;color:var(--green)}
+.quick-card p{font-size:.86rem;color:var(--muted);margin-top:6px}
+
+/* about */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.about-card{background:var(--green);color:#fff;border-radius:28px;padding:36px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.about-card:after{content:"";position:absolute;width:180px;height:180px;border:35px solid rgba(229,173,60,.15);border-radius:50%;right:-80px;bottom:-70px}
+.about-card h3{font:700 2rem/1.15 "Playfair Display",serif;color:var(--gold);margin:10px 0 18px}
+.about-card p{color:#d8e6dc;font-size:.94rem}
+.reg{margin-top:25px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:.78rem;color:#aac0b1}
+.about-copy h2{font:700 clamp(2rem,4vw,3rem)/1.08 "Playfair Display",serif;color:var(--green)}
+.about-copy>p{color:var(--muted);margin:18px 0 25px;max-width:60ch}
+.checks{display:grid;gap:13px;list-style:none}
+.checks li{display:flex;gap:11px;align-items:flex-start;font-weight:600}
+.check{width:25px;height:25px;border-radius:50%;background:#dff2e5;color:var(--green-2);display:grid;place-items:center;flex:0 0 auto;font-size:.78rem}
+
+/* livestock */
+.livestock{background:#fff}
+.service-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.service{border:1px solid var(--line);border-radius:20px;padding:24px 18px;background:var(--cream);transition:.2s}
+.service:hover{transform:translateY(-4px);box-shadow:var(--shadow);background:#fff}
+.service .emoji{font-size:1.8rem}
+.service h3{font:700 1.1rem "Playfair Display",serif;color:var(--green);margin:13px 0 6px}
+.service p{font-size:.82rem;color:var(--muted)}
+.note{margin-top:25px;padding:18px 20px;border-radius:16px;background:#edf6ef;color:var(--green-2);font-size:.88rem;border-left:4px solid var(--green-3)}
+
+/* boarding */
+.boarding{background:var(--green);color:#fff}
+.boarding .section-head h2{color:#fff}
+.boarding .section-head p:last-child{color:#c8d9ce}
+.boarding-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.benefits{display:grid;gap:14px;list-style:none}
+.benefits li{display:flex;gap:13px;align-items:flex-start}
+.benefit-icon{width:34px;height:34px;display:grid;place-items:center;background:rgba(229,173,60,.14);border:1px solid rgba(229,173,60,.25);border-radius:10px;flex:0 0 auto}
+.benefits strong{display:block;color:#fff}
+.benefits span{display:block;color:#bfd0c5;font-size:.84rem;margin-top:2px}
+.price-box{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:28px}
+.price-box h3{font:700 1.4rem "Playfair Display",serif;color:var(--gold);margin-bottom:18px}
+.price-list{display:grid;gap:12px}
+.price-row{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.9rem}
+.price-row:last-child{border-bottom:0}
+.price-row strong{color:var(--gold)}
+.boarding-cta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+
+/* gallery */
+.gallery{background:var(--cream-2)}
+.gallery-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:230px 230px;gap:14px}
+.gallery-item{border-radius:20px;overflow:hidden;background:var(--green);position:relative}
+.gallery-item.large{grid-row:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover}
+.gallery-overlay{position:absolute;inset:auto 0 0;padding:28px 18px 17px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75));font-weight:700}
+.placeholder{display:grid;place-items:center;text-align:center;padding:25px;color:#fff;background:linear-gradient(145deg,var(--green-2),var(--green))}
+.placeholder:nth-child(3){background:linear-gradient(145deg,#7c5820,#b47b20)}
+.placeholder:nth-child(4){background:linear-gradient(145deg,#7b3a2a,#b9573c)}
+.placeholder:nth-child(5){background:linear-gradient(145deg,#274e70,#3e7196)}
+
+/* locations */
+.locations{background:#fff}
+.locations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.location{border:1px solid var(--line);border-radius:22px;padding:26px;background:var(--cream)}
+.location .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--green-3)}
+.location h3{font:700 1.35rem "Playfair Display",serif;color:var(--green);margin:8px 0}
+.location p{font-size:.86rem;color:var(--muted)}
+.location a{display:inline-flex;margin-top:16px;color:var(--green-2);font-weight:700;font-size:.82rem}
+
+/* contact */
+.contact{background:var(--cream-2)}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}
+.contact-copy h2{font:700 clamp(2rem,4vw,3rem)/1.08 "Playfair Display",serif;color:var(--green);margin:8px 0 15px}
+.contact-copy>p{color:var(--muted)}
+.contact-details{list-style:none;display:grid;gap:13px;margin:25px 0}
+.contact-details li{display:flex;gap:12px;align-items:flex-start;font-size:.9rem}
+.contact-details .icon{width:34px;height:34px;background:#fff;border-radius:10px;display:grid;place-items:center;flex:0 0 auto}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;box-shadow:var(--shadow)}
+.form-card h3{font:700 1.45rem "Playfair Display",serif;color:var(--green);margin-bottom:5px}
+.form-card .form-intro{font-size:.8rem;color:var(--muted);margin-bottom:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{margin-bottom:15px}
+.field.full{grid-column:1/-1}
+label{display:block;font-size:.76rem;font-weight:700;margin-bottom:7px;color:#415047}
+input,select,textarea{width:100%;border:1px solid #d7e0d8;border-radius:12px;background:#fbfcfb;padding:12px 13px;font:inherit;font-size:.9rem;outline:none;transition:.2s}
+input:focus,select:focus,textarea:focus{border-color:var(--green-3);box-shadow:0 0 0 3px rgba(47,122,78,.1)}
+textarea{min-height:120px;resize:vertical}
+.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:5px}
+.form-note{font-size:.72rem;color:#7a877e;margin-top:12px}
+
+/* footer + floating WhatsApp */
+footer{background:#0b2418;color:#bcd0c1;padding:30px 0}
+.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:.78rem}
+.footer-row strong{color:#fff}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25d366;color:#062a14;display:grid;place-items:center;font-size:1.55rem;box-shadow:0 12px 30px rgba(0,0,0,.25);border:3px solid #fff}
+.float-wa:hover{transform:scale(1.05)}
+
+@media(max-width:980px){
+  .nav-links{gap:14px}
+  .service-grid{grid-template-columns:repeat(3,1fr)}
+  .hero-grid{gap:35px}
+}
+  @media(max-width:600px){
+  .farm-logo{
+    width:46px;
+    height:46px;
+    flex-basis:46px;
+  }
+  .brand strong{font-size:.88rem}
+  .brand small{font-size:.56rem;letter-spacing:.09em}
+}
+@media(max-width:820px){
+  .container{width:min(100% - 28px,680px)}
+  .topbar .container{font-size:.7rem}
+  .nav{height:68px;gap:12px}
+  .menu{display:block}
+  .nav-links{position:absolute;left:0;right:0;top:68px;background:var(--green);padding:18px 20px 22px;display:none;flex-direction:column;align-items:stretch;gap:16px;box-shadow:0 12px 20px rgba(0,0,0,.12)}
+  .nav-links.open{display:flex}
+  .nav-links a{display:block;padding:4px 0}
+  .nav-cta{display:none}
+  .hero-grid,.about-grid,.boarding-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-grid{padding:55px 0 75px}
+  .hero-photo img{height:420px}
+  .quick{margin-top:-30px}
+  .quick-grid{grid-template-columns:1fr}
+  .about-grid{gap:35px}
+  .service-grid{grid-template-columns:1fr 1fr}
+  .locations-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:210px 210px 210px}
+  .gallery-item.large{grid-row:span 2}
+  .contact-grid{gap:30px}
+}
+@media(max-width:430px){
+  .farm-logo{width:40px;height:40px;flex-basis:40px}
+  .brand{gap:8px}
+  .brand strong{font-size:.78rem}
+  .brand small{font-size:.49rem}
+  .menu{font-size:1.5rem}
+}
+
+@media(max-width:520px){
+  .section{padding:70px 0}
+  .hero h1{font-size:2.55rem}
+  .hero-photo img{height:330px}
+  .hero-trust{gap:18px}
+  .service-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:280px repeat(4,190px)}
+  .gallery-item.large{grid-row:span 1}
+  .form-grid{grid-template-columns:1fr}
+  .field.full{grid-column:auto}
+  .footer-row{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+
+<body>
+<div class="topbar">
+  <div class="container">
+    <span>📍 Abuja &amp; Oyo State</span>
+    <span>🐾 Pet Boarding</span>
+    <span>🌾 Livestock Services</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Pristinetech Farms home">
+      <img src="pristinetech-farms-logo-web.png"
+           alt="Pristinetech Farms"
+           class="farm-logo">
+      <span class="brand-copy">
+        <strong>PRISTINETECH FARMS</strong>
+        <small>Livestock &amp; Pet Care</small>
+      </span>
+    </a>
+
+    <button class="menu" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav>
+      <ul class="nav-links" id="navList">
+        <li><a href="#about">About</a></li>
+        <li><a href="#livestock">Livestock</a></li>
+        <li><a href="#boarding">Pet Boarding</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-whatsapp nav-cta" href="https://wa.me/2347010302625?text=Hello%20Pristinetech%20Farms%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:var(--gold)">Trusted farm. Thoughtful care.</p>
+      <h1>Good farming. <em>Better care.</em></h1>
+      <p class="hero-lede">Pristinetech Farms provides livestock procurement and sales, farm support, and a safe home-away-from-home for dogs and cats in Abuja and Oyo State.</p>
+      <div class="hero-actions">
+        <a class="btn btn-whatsapp" href="https://wa.me/2347010302625?text=Hello%20Pristinetech%20Farms%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+        <a class="btn btn-outline" href="#boarding">View Pet Boarding</a>
+      </div>
+      <div class="hero-trust">
+        <div><strong>5+</strong><span>Livestock categories</span></div>
+        <div><strong>3</strong><span>Business locations</span></div>
+        <div><strong>3+</strong><span>Years in Business</span></div>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="dog-boarding.jpg" alt="Dogs receiving care at Pristinetech Farms">
+      <div class="photo-tag">🐕 Pet boarding &amp; care<span>Comfortable, attentive, family-minded care</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="quick">
+  <div class="container quick-grid">
+    <a class="quick-card" href="#livestock">
+      <div class="quick-icon">🐔</div>
+      <h3>Livestock</h3>
+      <p>Chicken, goat, pig, turkey and duck procurement &amp; sales.</p>
+    </a>
+    <a class="quick-card" href="#boarding">
+      <div class="quick-icon">🐕</div>
+      <h3>Dog &amp; Cat Boarding</h3>
+      <p>A safe, caring place for your pets while you are away.</p>
+    </a>
+    <a class="quick-card" href="#contact">
+      <div class="quick-icon">💬</div>
+      <h3>Book by WhatsApp</h3>
+      <p>Send your dates, animal type, quantity or questions directly.</p>
+    </a>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="container about-grid">
+    <div class="about-card">
+      <p class="eyebrow" style="color:#b9d5c3">About the business</p>
+      <h3>Registered. Practical. Care-focused.</h3>
+      <p>Pristinetech Farms is registered as a business name in Nigeria under the Companies and Allied Matters Act 2020. Its registered activity includes livestock-related services and pet boarding.</p>
+      <div class="reg">Registration No. 3312398</div>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">Why Pristinetech</p>
+      <h2>One trusted farm for animals, owners and buyers.</h2>
+      <p>Whether you need livestock procurement and sales or dependable boarding for a dog or cat, our goal is straightforward: responsive service, responsible handling and clear communication.</p>
+      <ul class="checks">
+        <li><span class="check">✓</span><span>Livestock vaccination, procurement and sales support</span></li>
+        <li><span class="check">✓</span><span>Dog and cat boarding services</span></li>
+        <li><span class="check">✓</span><span>Direct enquiries and bookings through WhatsApp</span></li>
+        <li><span class="check">✓</span><span>Service presence across Abuja and Oyo State</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="livestock" class="section livestock">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Livestock services</p>
+      <h2>Farm animals we handle</h2>
+      <p>Pristinetech Farms works with a range of livestock breeds, from small-scale poultry to larger farm animals, with procurement and sales support.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service"><div class="emoji">🐔</div><h3>Chicken</h3><p>Poultry procurement, sales and farm support.</p></article>
+      <article class="service"><div class="emoji">🐐</div><h3>Goat</h3><p>Goat procurement and sales enquiries.</p></article>
+      <article class="service"><div class="emoji">🐖</div><h3>Pig</h3><p>Pig procurement and sales enquiries.</p></article>
+      <article class="service"><div class="emoji">🦃</div><h3>Turkey</h3><p>Turkey procurement and sales enquiries.</p></article>
+      <article class="service"><div class="emoji">🦆</div><h3>Duck</h3><p>Duck procurement and sales enquiries.</p></article>
+    </div>
+    <div class="note"><strong>Need a quantity or breed?</strong> Tell us what you need on WhatsApp and include your preferred quantity, location and timeframe.</div>
+  </div>
+</section>
+
+<section id="boarding" class="section boarding">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--gold)">Dog &amp; cat boarding</p>
+      <h2>A safe home away from home.</h2>
+      <p>Pets are more than animals — they are family. Send us your boarding dates and pet details and we will respond directly on WhatsApp.</p>
+    </div>
+
+    <div class="boarding-grid">
+      <div>
+        <ul class="benefits">
+          <li><span class="benefit-icon">✓</span><div><strong>Attentive care</strong><span>Professional attention for dogs and cats in our care.</span></div></li>
+          <li><span class="benefit-icon">✓</span><div><strong>Boarding support</strong><span>Share your dates, pet type and any special instructions when booking.</span></div></li>
+          <li><span class="benefit-icon">✓</span><div><strong>Direct communication</strong><span>Use WhatsApp for quick questions, availability and booking requests.</span></div></li>
+          <li><span class="benefit-icon">✓</span><div><strong>Convenient location</strong><span>Farm &amp; boarding location: Kabusa Village, Abuja.</span></div></li>
+        </ul>
+        <div class="boarding-cta">
+          <a class="btn btn-whatsapp" href="https://wa.me/2347010302625?text=Hello%20Pristinetech%20Farms%2C%20I%20want%20to%20ask%20about%20dog%2Fcat%20boarding." target="_blank" rel="noopener">🐾 Ask about boarding</a>
+          <a class="btn btn-outline" href="tel:+2347010302625">📞 Call us</a>
+        </div>
+      </div>
+
+      <div class="price-box">
+        <h3>Boarding enquiry</h3>
+        <div class="price-list">
+          <div class="price-row"><span>Pet type</span><strong>Dog / Cat</strong></div>
+          <div class="price-row"><span>Booking</span><strong>WhatsApp</strong></div>
+          <div class="price-row"><span>Location</span><strong>Kabusa, Abuja</strong></div>
+          <div class="price-row"><span>What to send</span><strong>Dates + pet details</strong></div>
+        </div>
+        <p style="color:#b9cbbf;font-size:.78rem;margin-top:16px">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section gallery">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Gallery</p>
+      <h2>A glimpse of the farm &amp; boarding home</h2>
+      <p>Real photos from Pristinetech Farms, showing our poultry, turkeys, dogs and cats.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item large">
+        <img src="chicken-flock.jpg" alt="Chicken flock at Pristinetech Farms" loading="lazy">
+        <div class="gallery-overlay">Poultry at Pristinetech Farms</div>
+      </div>
+      <div class="gallery-item">
+        <img src="turkey-1.jpg" alt="Turkey at Pristinetech Farms" loading="lazy">
+        <div class="gallery-overlay">Turkey farming</div>
+      </div>
+      <div class="gallery-item">
+        <img src="dog-boarding.jpg" alt="Dog at Pristinetech Farms" loading="lazy">
+        <div class="gallery-overlay">Dog care &amp; boarding</div>
+      </div>
+      <div class="gallery-item">
+        <img src="cat-boarding.jpg" alt="Cats at Pristinetech Farms" loading="lazy">
+        <div class="gallery-overlay">Cat care &amp; boarding</div>
+      </div>
+      <div class="gallery-item">
+        <img src="chicken-1.jpg" alt="Chicken at Pristinetech Farms" loading="lazy">
+        <div class="gallery-overlay">Chicken</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="locations" class="section locations">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Where we are</p>
+      <h2>Three locations, one business</h2>
+    </div>
+    <div class="locations-grid">
+      <article class="location">
+        <div class="label">Branch Office</div>
+        <h3>Garki, Abuja</h3>
+        <p>No 4 Biu Close, Off Oyo Street, Area 2, Garki, Abuja</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=No%204%20Biu%20Close%2C%20Off%20Oyo%20Street%2C%20Area%202%2C%20Garki%2C%20Abuja" target="_blank" rel="noopener">Open in Maps →</a>
+      </article>
+      <article class="location">
+        <div class="label">Farm &amp; Boarding Location</div>
+        <h3>Kabusa Village, Abuja</h3>
+        <p>Angwan-Tiv Gatehouse, behind ERCC Church, Kabusa Village, Abuja</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Angwan-Tiv%20Gatehouse%2C%20Kabusa%20Village%2C%20Abuja" target="_blank" rel="noopener">Open in Maps →</a>
+      </article>
+      <article class="location">
+        <div class="label">Head Office</div>
+        <h3>Olodo, Ibadan</h3>
+        <p>House 4, behind Olodo Community Grammar School, Olodo, Ibadan, Oyo State</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=House%204%2C%20Olodo%2C%20Ibadan%2C%20Oyo%20State" target="_blank" rel="noopener">Open in Maps →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <div class="container contact-grid">
+    <div class="contact-copy">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Tell us what you need.</h2>
+      <p>Complete the short form and the site will open WhatsApp with a ready-made enquiry. You can edit the message before sending.</p>
+
+      <ul class="contact-details">
+        <li><span class="icon">📍</span><span>No 4 Biu Close, Off Oyo Street, Area 2, Garki, Abuja</span></li>
+        <li><span class="icon">📞</span><span><a href="tel:+2347010302625">+234 701 030 2625</a><br><a href="tel:+2348033248639">+234 803 324 8639</a></span></li>
+        <li><span class="icon">✉️</span><a href="mailto:pristinetechbiz@gmail.com">pristinetechbiz@gmail.com</a></li>
+        <li><span class="icon">🌐</span><span>farm.pristinetechbiz.com.ng</span></li>
+        <li><span class="icon">📘</span><span>Facebook: Pristinetech Farms</span></li>
+      </ul>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/2347010302625?text=Hello%20Pristinetech%20Farms%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">💬 Message us directly</a>
+    </div>
+
+    <div class="form-card">
+      <h3>Book or enquire on WhatsApp</h3>
+      <p class="form-intro">Your details are not sent to a server. We create a WhatsApp message on your device.</p>
+      <form id="whatsappForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Your name *</label>
+            <input id="name" name="name" type="text" placeholder="Full name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone / WhatsApp *</label>
+            <input id="phone" name="phone" type="tel" placeholder="080..." required>
+          </div>
+          <div class="field full">
+            <label for="type">I'm enquiring about *</label>
+            <select id="type" name="type" required>
+              <option value="Dog / Cat boarding">🐾 Dog / Cat boarding</option>
+              <option value="Livestock - chicken">🐔 Chicken</option>
+              <option value="Livestock - goat">🐐 Goat</option>
+              <option value="Livestock - pig">🐖 Pig</option>
+              <option value="Livestock - turkey">🦃 Turkey</option>
+              <option value="Livestock - duck">🦆 Duck</option>
+              <option value="Other livestock enquiry">🌾 Other livestock enquiry</option>
+              <option value="Something else">💬 Something else</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="dates">Dates / quantity (optional)</label>
+            <input id="dates" name="dates" type="text" placeholder="e.g. 10–15 Sept / 20 birds">
+          </div>
+          <div class="field full">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg" placeholder="Tell us what you need, your preferred location, breed or any other details..."></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-whatsapp" type="submit">💬 Send to WhatsApp</button>
+          <a class="btn btn-light" href="tel:+2347010302625">📞 Call instead</a>
+        </div>
+        <p class="form-note">WhatsApp number: +234 701 030 2625</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <span>© 2026 <strong>Pristinetech Farms</strong> · Reg. No. 3312398</span>
+    <span>pristinetechbiz.com.ng</span>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/2347010302625?text=Hello%20Pristinetech%20Farms%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with Pristinetech Farms on WhatsApp">💬</a>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navList = document.getElementById('navList');
+
+menuToggle.addEventListener('click', () => {
+  const open = navList.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navList.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const type = document.getElementById('type').value;
+  const dates = document.getElementById('dates').value.trim();
+  const msg = document.getElementById('msg').value.trim();
+
+  const message =
+`Hello Pristinetech Farms,
+
+My name is ${name}.
+My phone/WhatsApp number is ${phone}.
+
+I am enquiring about: ${type}
+${dates ? `Dates / quantity: ${dates}\n` : ''}${msg ? `Message: ${msg}\n` : ''}
+Please let me know the availability, price and next steps.
+
+Thank you.`;
+
+  const url = 'https://wa.me/2347010302625?text=' + encodeURIComponent(message);
+  window.open(url, '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
